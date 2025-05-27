@@ -1,5 +1,5 @@
 /**
- * pH Sensor Functions for analog pH Meter (z. B. SEN0161)
+ * pH Sensor Functions for analog pH Meter (E-201C-Blue)
  */
 
 //% color="#33A1C9" icon="\uf043" weight=90
