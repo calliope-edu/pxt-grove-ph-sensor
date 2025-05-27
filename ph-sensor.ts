@@ -6,7 +6,7 @@
 namespace phSensor {
 
     let offset = 41.02740741
-    let k = 19.18518519
+    let k = -19.18518519
     let samples = 20
     let voltageRef = 3.3
 
@@ -24,10 +24,10 @@ namespace phSensor {
 
     /**
      * Kalibriere den Sensor mit zwei Referenzpunkten
-     * @param ph1 Erster pH-Wert (z. B. 4.0)
-     * @param v1 Gemessene Spannung (z. B. 3.00)
-     * @param ph2 Zweiter pH-Wert (z. B. 9.18)
-     * @param v2 Gemessene Spannung (z. B. 1.92)
+     * @param ph1 Erster pH-Wert 1
+     * @param v1 Gemessene Spannung 1
+     * @param ph2 Zweiter pH-Wert 2
+     * @param v2 Gemessene Spannung 2
      */
     //% block="Kalibriere Sensor:|pH1 %ph1|Spannung1 %v1|pH2 %ph2|Spannung2 %v2"
     //% ph1.defl=4 v1.defl=1.93 ph2.defl=9.18 v2.defl=1.66
