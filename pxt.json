@@ -1,6 +1,6 @@
 {
     "name": "PH Sensor",
-    "description": "",
+    "description": "Calliope Extension for Grove PH Sensor E-201C-Blue",
     "dependencies": {
         "core": "*",
         "v3": "*"
@@ -15,6 +15,7 @@
         "test.ts"
     ],
     "icon": "icon.png",
+    "public": true,
     "targetVersions": {
         "target": "7.0.3",
         "targetId": "calliopemini"
@@ -22,5 +23,5 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }
