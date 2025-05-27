@@ -33,7 +33,7 @@ namespace phSensor {
         return -19.18518519 * voltage + offset
     }
 
-    // 🚫 intern: Durchschnitt ohne Ausreißer
+    // intern: Durchschnitt ohne Ausreißer
     function averageFiltered(values: number[]): number {
         if (values.length < 3) return average(values)
 
@@ -56,7 +56,7 @@ namespace phSensor {
         return count > 0 ? sum / count : average(values)
     }
 
-    // 🚫 intern: Standard-Durchschnitt
+    // intern: Standard-Durchschnitt
     function average(values: number[]): number {
         let sum = 0
         for (let val of values) sum += val

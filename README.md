@@ -1,6 +1,8 @@
 
 > Diese Seite bei [https://jasperp92.github.io/pxt-grove-ph-sensor/](https://jasperp92.github.io/pxt-grove-ph-sensor/) öffnen
 
+Dies ist eine MakeCode-Erweiterung für den [Grove PH-Sensor](https://wiki.seeedstudio.com/Grove-PH-Sensor-kit/) für den Calliope mini. Falls der Sensor mit einem anderen Microcontroller angepasst wird sollte. 
+
 ## Als Erweiterung verwenden
 
 Dieses Repository kann als **Erweiterung** in MakeCode hinzugefügt werden.
