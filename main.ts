@@ -1,6 +1,10 @@
-phSensor.setSamples(10)
+phSensor.configureSensor(10, VoltageSystem.V33)
+phSensor.calibrate(
+4,
+1.93,
+9.18,
+1.66
+)
 basic.forever(function () {
-    basic.showNumber(phSensor.readPh(AnalogPin.C16))
     serial.writeLine("" + (phSensor.readPh(AnalogPin.C16)))
-    basic.pause(100)
 })
