@@ -3,9 +3,9 @@
 
 Dies ist eine MakeCode-Erweiterung für den [Grove PH-Sensor](https://wiki.seeedstudio.com/Grove-PH-Sensor-kit/) für den Calliope mini. 
 
-## Messung
+## PH-Wert-Messung
 
-Der Sensor kann an einen beliebigen analogen Pin angeschlossen werden. Für den Calliope mini an den rechten Grove-Adapter A1 (C16/RX). 
+Der Sensor kann an einen beliebigen analogen Pin angeschlossen werden. Im Falle des Grove-Anschlusses für den Calliope mini an den rechten Grove-Adapter A1 (C16/RX). 
 Der Sensor gibt PH-Werte im Bereich 0 - 14 zurück. Trinkwasser liegt im Bereich zwischen 6,5 und 9,5.
 
 ```blocks
@@ -18,15 +18,18 @@ basic.forever(function () {
 ## Konfiguration des Sensors
 
 Die Samples ist die Anzahl der Messwerte um daraus einen Mittelwert zu ermitteln 
-Der Sensor wird mit 3,3 Volt standardmäßig betrieben, kann aber auch für 5V Microcontroller konfiguriert werden:
+Der Sensor wird mit 3,3 Volt standardmäßig betrieben, kann aber auch für andere Spannungen konfiguriert werden.
+
+> [!IMPORTANT] 
+> Falls der Calliope mini mit einer Batterie betrieben wird, dann verändert sich auch die Ausgangsspannung leicht und es wird die PH-Wert-Messung beeinflusst. In dem Fall sollte die Spannung des Calliope mini an dem Grove-Anschluss gemessen werden und mit dieser der Sensor konfiguriert werden:
 
 ```blocks
-phSensor.configureSensor(20, VoltageSystem.V50)
+phSensor.configureSensor(20, 2.83)
 ```
 
 ## Kalibrierung des Sensors
 
-Damit der Sensor verlässlich funktioniert muss dieser zuvor mit zwei Referenzflüssigkeiten mit bekanntem PH-Wert kalibriert werden. Daraus wird der Spannungswerte entnommen werden um den Sensor um daraus den K-Wert, sowie das Offset zu ermitteln:
+Damit der Sensor verlässlich funktioniert muss dieser zuvor mit zwei Referenzflüssigkeiten mit bekanntem PH-Wert kalibriert werden. Daraus werden die Spannungswerte entnommen, um den K-Wert, sowie das Offset für die PH-Wert-Berechnung zu ermitteln:
 
 $k= (PH2-PH1)/(V2-V1)$
 
