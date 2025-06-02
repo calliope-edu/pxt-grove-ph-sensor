@@ -14,8 +14,6 @@
     "testFiles": [
         "test.ts"
     ],
-    "icon": "icon.png",
-    "public": true,
     "targetVersions": {
         "target": "7.0.3",
         "targetId": "calliopemini"
@@ -23,5 +21,6 @@
     "supportedTargets": [
         "calliopemini"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "icon": "icon.png"
 }

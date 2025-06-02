@@ -15,11 +15,11 @@ namespace phSensor {
      */
     //% block="Konfiguriere pH-Sensor: | Samples %n | Spannung %v"
     //% n.min=1 n.max=100
-    //% n.defl=20
+    //% n.defl=20 v.defl=3.3
     //% weight=30
-    export function configureSensor(n: number, v: VoltageSystem): void {
+    export function configureSensor(n: number, v: number): void {
         samples = Math.max(1, n)
-        voltageRef = (v == VoltageSystem.V50) ? 5.0 : 3.3
+        voltageRef = v
     }
 
     /**
@@ -101,12 +101,4 @@ namespace phSensor {
         for (let val of values) sum += val
         return values.length > 0 ? sum / values.length : 0
     }
-}
-
-//% blockNamespace=phSensor
-enum VoltageSystem {
-    //% block="3.3V"
-    V33 = 33,
-    //% block="5V"
-    V50 = 50
 }
